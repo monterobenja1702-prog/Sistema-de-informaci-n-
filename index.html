@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión - Club Atlético</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <header>
+            <h1>⚽ Club Atlético</h1>
+            <nav class="menu-pestanas">
+                <button class="btn-tab" onclick="cambiarPestana('seccionSocios')">Registrar Socio</button>
+                <button class="btn-tab" onclick="cambiarPestana('seccionEmpleados')">Contratar Empleado</button>
+                <button class="btn-tab" onclick="cambiarPestana('seccionAtenciones')">Registrar Atención</button>
+            </nav>
+        </header>
+
+        <section id="seccionSocios" class="seccion activa">
+            <h2>Nuevo Socio</h2>
+            <form id="formSocio">
+                <div class="campo">
+                    <label for="nombreSocio">Nombre y Apellido *</label>
+                    <input type="text" id="nombreSocio" required placeholder="Ej: Lionel Gómez">
+                </div>
+                <div class="campo">
+                    <label for="dniSocio">DNI (Mínimo 10 cifras) *</label>
+                    <input type="text" id="dniSocio" pattern="\d{10,}" required placeholder="Ej: 1234567890">
+                </div>
+                <div class="campo">
+                    <label for="emailSocio">Correo Electrónico *</label>
+                    <input type="email" id="emailSocio" required placeholder="socio@club.com">
+                </div>
+                <button type="submit" class="btn-accion">Asociar al Club</button>
+            </form>
+        </section>
+
+        <section id="seccionEmpleados" class="seccion">
+            <h2>Contratar Empleado</h2>
+            <form id="formEmpleado">
+                <div class="campo">
+                    <label for="nombreEmpleado">Nombre y Apellido *</label>
+                    <input type="text" id="nombreEmpleado" required placeholder="Ej: Carlos Bianchi">
+                </div>
+                <div class="campo">
+                    <label for="cargoEmpleado">Cargo / Puesto *</label>
+                    <input type="text" id="cargoEmpleado" required placeholder="Ej: Atención al Socio / Utilero">
+                </div>
+                <div class="campo">
+                    <label for="sueldoEmpleado">Sueldo ($) *</label>
+                    <input type="number" id="sueldoEmpleado" required placeholder="Ej: 500000">
+                </div>
+                <button type="submit" class="btn-accion">Contratar Empleado</button>
+            </form>
+        </section>
+
+        <section id="seccionAtenciones" class="seccion">
+            <h2>Atención en Ventanilla</h2>
+            <form id="formAtencion">
+                <div class="campo">
+                    <label for="selectEmpleado">Empleado que atiende *</label>
+                    <select id="selectEmpleado" required>
+                        <option value="">Seleccione un empleado...</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="selectSocio">Socio atendido *</label>
+                    <select id="selectSocio" required>
+                        <option value="">Seleccione un socio...</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="motivoAtencion">Motivo de la consulta *</label>
+                    <input type="text" id="motivoAtencion" required placeholder="Ej: Pago de cuota social / Retiro de entradas">
+                </div>
+                <button type="submit" class="btn-accion">Registrar Atención</button>
+            </form>
+        </section>
+
+        <div id="mensajeRespuesta" class="mensaje"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
