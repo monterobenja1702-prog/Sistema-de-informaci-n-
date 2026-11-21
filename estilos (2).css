@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #12181b;
+    color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contenedor-principal {
+    background-color: #1e262c;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 520px;
+    border-top: 5px solid #2ecc71;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.menu-pestanas {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 25px;
+    background-color: #12181b;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.btn-tab {
+    flex: 1;
+    padding: 8px;
+    background: transparent;
+    color: #a0aab2;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 11px;
+    transition: all 0.2s;
+}
+
+.btn-tab:hover {
+    background-color: #2b3740;
+    color: #ffffff;
+}
+
+.seccion {
+    display: none;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #cbd5e1;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2ecc71;
+}
+
+.btn-accion {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-accion:hover {
+    background-color: #27ae60;
+}
+
+.mensaje {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.exito {
+    display: block;
+    background-color: #064e3b;
+    color: #6ee7b7;
+    border: 1px solid #047857;
+}
+
+.error {
+    display: block;
+    background-color: #7f1d1d;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+}
